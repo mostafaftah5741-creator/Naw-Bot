@@ -373,13 +373,6 @@ class EliteBot:
     def init_tor(self):
     self.tor_session = None  # ✅ فقط عرف المتغير
     # لا تحاول الاتصال بـ TOR
-                self.tor_session.proxies = {
-                    'http': 'socks5h://127.0.0.1:9050',
-                    'https': 'socks5h://127.0.0.1:9050'
-                }
-                logger.info("TOR initialized successfully")
-        except Exception as e:
-            logger.warning(f"TOR initialization failed: {e}")
             
     async def start(self):
         """بدء تشغيل البوت"""
