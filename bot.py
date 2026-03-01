@@ -371,9 +371,7 @@ class EliteBot:
         self.init_tor()
         
     def init_tor(self):
-    self.tor_session = None  # ✅ فقط عرف المتغير
-    # لا تحاول الاتصال بـ TOR
-            
+        self.tor_session = None  # ✅ فقط عرف المتغير
     async def start(self):
         """بدء تشغيل البوت"""
         self.client = TelegramClient('elite_bot_session', self.api_id, self.api_hash)
