@@ -1,0 +1,10 @@
+telethon
+colorama
+requests
+aiohttp
+psutil
+cryptography
+python-nmap
+dnspython
+python-whois
+stem
