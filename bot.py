@@ -370,15 +370,16 @@ class EliteBot:
         self.tor_session = None
         self.init_tor()
         
-    def init_tor(self):
-        self.tor_session = None  # ✅ فقط عرف المتغير
-    async def start(self):
-        """بدء تشغيل البوت"""
-        self.client = TelegramClient('elite_bot_session', self.api_id, self.api_hash)
-        await self.client.start(bot_token=self.bot_token)
-        
-        # تسجيل جميع الهاندلرز
-        self.register_handlers()
+def init_tor(self):
+    self.tor_session = None
+    
+async def start(self):
+    """بدء تشغيل البوت"""
+    self.client = TelegramClient('elite_bot_session', self.api_id, self.api_hash)
+    await self.client.start(bot_token=self.bot_token)
+    
+    # تسجيل جميع الهاندلرز
+    self.register_handlers()
         
         # بدء المهام الخلفية
         asyncio.create_task(self.background_tasks())
