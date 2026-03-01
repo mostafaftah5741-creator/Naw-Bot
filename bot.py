@@ -382,7 +382,7 @@ async def start(self):
     self.register_handlers()
         
         # بدء المهام الخلفية
-        asyncio.create_task(self.background_tasks())
+   #     asyncio.create_task(self.background_tasks())
         
         logger.info(f"Bot started at {datetime.datetime.now()}")
         print(Fore.GREEN + "="*50)
